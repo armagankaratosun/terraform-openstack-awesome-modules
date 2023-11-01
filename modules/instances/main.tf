@@ -19,6 +19,10 @@ resource "openstack_compute_instance_v2" "vm" {
   network {
     name = "${var.openstack_net_name}"
   }
+
+  lifecycle {
+    ignore_changes = [image_id]
+  }
 }
 
 
