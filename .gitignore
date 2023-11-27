@@ -34,5 +34,8 @@ override.tf.json
 terraform.rc
 
 # Ignore DS_Store
-*._.DS_Store*
 .DS_Store
+._.DS_Store
+*._.DS_Store*
+**/._.DS_Store
+**/.DS_Store
