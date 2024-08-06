@@ -33,3 +33,8 @@ variable openstack_keypair_name {
    type = string
    description = "the ssh key pair that will be injected to the VM"
 }
+variable "fixed_ip_v4" {
+   description = "List of fixed IPv4 addresses to be used on the network."
+   type        = list(string)
+   default     = [""]
+}
