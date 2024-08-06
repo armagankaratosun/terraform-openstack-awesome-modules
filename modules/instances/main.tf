@@ -36,3 +36,4 @@ output "vm_ip_addresses" {
 output "vm_instance_id" {
   value = openstack_compute_instance_v2.vm.*.id
 }
+}
