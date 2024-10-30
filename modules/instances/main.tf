@@ -19,7 +19,7 @@ resource "openstack_compute_instance_v2" "vm" {
   network {
     name = "${var.openstack_net_name}"
     # Use the corresponding fixed IPv4 address from the list, if given
-    fixed_ip_v4 = var.fixed_ip_v4[count.index]
+    # fixed_ip_v4 = var.fixed_ip_v4[count.index]
   }
   lifecycle {
     ignore_changes = [image_id]
