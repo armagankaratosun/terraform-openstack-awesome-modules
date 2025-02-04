@@ -9,3 +9,7 @@ output "vm_ip_addresses" {
 output "vm_instance_id" {
   value = openstack_compute_instance_v2.vm.*.id
 }
+
+output "vm_port_id" {
+  value = data.openstack_networking_port_v2.vm_port.*.id
+}
