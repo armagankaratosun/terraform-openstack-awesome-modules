@@ -25,3 +25,10 @@ resource "openstack_compute_instance_v2" "vm" {
     ignore_changes = [image_id]
   }
 }
+
+data "openstack_networking_port_v2" "vm_port" {
+  count    = length(var.openstack_vmname)
+  fixed_ip = openstack_compute_instance_v2.vm[count.index].access_ip_v4
+}
+
+
