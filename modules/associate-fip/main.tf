@@ -11,7 +11,7 @@ address = (var.openstack_vm_floatingip[count.index])
 }
 
 
-resource "openstack_compute_floatingip_associate_v2" "vm-floatingip" {
+resource "openstack_networking_floatingip_associate_v2" "vm-floatingip" {
   count = length(var.openstack_vm_floatingip)
   floating_ip = (data.openstack_networking_floatingip_v2.vm-floatingip-vm[count.index].address)
   instance_id = (var.vm_instance_id[count.index])
